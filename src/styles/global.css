@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-accent: #8b5cf6;
+}
+body {
+  @apply bg-white text-gray-900 antialiased;
+}

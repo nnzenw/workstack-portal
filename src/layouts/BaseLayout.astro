@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  children: Astro.Children;
+}
+
+const { title, description = 'Workstack portal', children } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      :root {
+        --color-accent: #8b5cf6;
+      }
+      body {
+        @apply bg-white text-gray-900 antialiased;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white font-sans">
+    <header class="border-b border-gray-100">
+      <nav class="container-main max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="font-bold text-xl text-accent-500">Workstack</a>
+        <div class="space-x-6">
+          <a href="https://creator.workstack.net" class="text-gray-600 hover:text-accent-500">Creator</a>
+          <a href="https://ecom.workstack.net" class="text-gray-600 hover:text-accent-500">E-commerce</a>
+        </div>
+      </nav>
+    </header>
+    <main>{children}</main>
+    <footer class="border-t border-gray-100 mt-16 py-10 text-center text-sm text-gray-500">
+      <p>&copy; {new Date().getFullYear()} Workstack. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

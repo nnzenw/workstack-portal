@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Workstack — Creator & E-commerce Tools" description="Workstack network: creator tools and e-commerce tools directories.">
+  <section class="min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+      <span class="text-accent-500">Workstack</span>
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl leading-relaxed">
+      One network, two hubs. <strong>Creator tools</strong> for makers. <strong>E-commerce tools</strong> for sellers.
+    </p>
+    <div class="grid md:grid-cols-2 gap-8 w-full max-w-4xl">
+      <!-- Creator Hub -->
+      <a href="https://creator.workstack.net" class="group relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:border-accent-400 transition-all duration-300 flex flex-col items-center">
+        <div class="text-4xl mb-4">🛠️</div>
+        <h2 class="text-2xl font-bold mb-2">Creator Hub</h2>
+        <p class="text-gray-600 mb-6">AI skills, video editors, newsletter platforms, and more for content creators.</p>
+        <span class="text-accent-500 font-semibold group-hover:underline">Visit creator.workstack.net →</span>
+      </a>
+      <!-- E-commerce Hub -->
+      <a href="https://ecom.workstack.net" class="group relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:border-accent-400 transition-all duration-300 flex flex-col items-center">
+        <div class="text-4xl mb-4">🛒</div>
+        <h2 class="text-2xl font-bold mb-2">E-commerce Hub</h2>
+        <p class="text-gray-600 mb-6">Shop platforms, payment gateways, inventory tools for online sellers.</p>
+        <span class="text-accent-500 font-semibold group-hover:underline">Visit ecom.workstack.net →</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

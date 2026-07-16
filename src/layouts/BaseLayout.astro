@@ -5,7 +5,7 @@ interface Props {
   children: Astro.Children;
 }
 
-const { title, description = 'Workstack portal', children } = Astro.props;
+const { title, description = 'Workstack portal' } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,7 @@ const { title, description = 'Workstack portal', children } = Astro.props;
         </div>
       </nav>
     </header>
-    <main>{children}</main>
+    <main><slot /></main>
     <footer class="border-t border-gray-100 mt-16 py-10 text-center text-sm text-gray-500">
       <p>&copy; {new Date().getFullYear()} Workstack. All rights reserved.</p>
     </footer>
